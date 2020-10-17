@@ -51,12 +51,15 @@ void drawBackground() {
   stroke(255);
   strokeWeight(5);
   rect(90, 200, 1020, 500);
+  streatN = new Street(80);
+  
+  streatS = new Street(720);
+  
   noStroke();
   fill(100);
-  rect(570,190, 60, 20);
-  rect(570,690, 60, 40);
-  streatN = new Street(80);
-  streatS = new Street(720);
+  rect(570,185, 60, 30);
+  rect(570,685, 60, 40);
+  
   ParkingLot lot = new ParkingLot();
 }
 
