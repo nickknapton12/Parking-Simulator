@@ -3,26 +3,38 @@ Car cars[] = new Car[500];
 void spawncars(){
   for(int i = 0; i < 500; i++){
     int x = int(random(-200,0))*80;
-    cars[i] = new Car (x, 80);
+    cars[i] = new Car (x, 82);
   }
 }
 
 void drawcars(){
-  for(int i = 0; i< 50; i++){
-   cars[i].x = cars[i].x + 8; 
-   cars[i].drawCar();
+  for(int i = 0; i< 500; i++){
+    if(cars[i].down == true){
+      cars[i].y = cars[i].y + 8; 
+      cars[i].drawCar();
+    }
+    else{
+       cars[i].x = cars[i].x + 3; 
+       cars[i].drawCar();
+    }
    if(cars[i].x == 8000){
-    cars[i].x = -11000; 
+    cars[i].x = -16000; 
    }
-   if(cars[i].x == 570){
-     if(random(0,3) == 0){
-       
-     }
+   if(cars[i].y == 1000){
+    cars[i].y = 82;
+    cars[i].x = -16000; 
+    cars[i].down = false;
+   }
+   if(cars[i].x < 650 && cars[i].x > 550){
+     if(random(0,3) == 1){
+       cars[i].down = true;
+    }
    }
   }
 }
 
 class Car {
+  boolean down = false;
   float x;
   float y;
   color col;
