@@ -17,7 +17,7 @@ void drawcars() {
         cars[i].y = cars[i].y + 8; 
         cars[i].drawCar();
       } else if (cars[i].leaving == true) {
-        cars[i].x = cars[i].x - 8;
+        cars[i].x = cars[i].x + 8;
         if (cars[i].x < -100) {
           cars[i].leaving = false;
           cars[i].y = 82;
@@ -43,17 +43,15 @@ void drawcars() {
         cars[i].parked = true;
         cars[i].down = false;
         full++;
-        println(full);
       }
 
       if (cars[i].parked == true && oneCarAtTime == true) {
-        if (int(random(0, 500)) == 2) {
+        if (int(random(0, 2000)) == 2) {
           oneCarAtTime = false;
           cars[i].parked = false;
           cars[i].down = false;
           cars[i].leaving = true;
           full--;
-          println(full);
         }
       }
 
@@ -65,7 +63,9 @@ void drawcars() {
     }
   } else {
     for(int i = 0; i < 500; i++) {
-      cars[i].drawCar();
+      if(cars[i].parked == false){
+          cars[i].drawCar();
+      }
     }
   }
 }
