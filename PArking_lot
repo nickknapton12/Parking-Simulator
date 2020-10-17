@@ -1,9 +1,10 @@
 class ParkingStall{
   int ypos, xpos;
+  boolean occupied;
   ParkingStall(boolean occu, int x, int y){
     ypos = y;
     xpos = x;
-    
+    occupied = occu;
     if(occu == true)
       fill(255,100,100);
     else
