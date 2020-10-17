@@ -1,5 +1,7 @@
 class billboard{
-  
+
+  //Creates the billboard which displays total spaces left available
+
   billboard(int xpos,int ypos){
     
     stroke(0);
@@ -19,6 +21,9 @@ class billboard{
     text(120-full,1085,470);
     
   }
+  
+  //Creates the billboard which displays money recieved
+  
   void money(int xpos,int ypos){
     
     stroke(0);
