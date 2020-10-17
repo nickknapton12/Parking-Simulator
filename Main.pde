@@ -13,6 +13,7 @@ int full = 0;
 Car cars[] = new Car[500];
 Gate gate_north;
 Gate gate_south;
+billboard B;
 
 void setup() {
   size(1200, 830);
@@ -32,8 +33,15 @@ void draw() {
   current_date.time = minute/60;
   drawBackground();
   drawcars();
-  gate_north = new Gate(519,190,1);
-  gate_south = new Gate(519,690,1);
+ B = new billboard(0,0);
+  drawcars();
+  if(full < 120){
+  gate_north = new Gate(505,190,1,"Enter");
+  }
+  if(full >= 120){
+  gate_north = new Gate(505,190,0,"Enter");
+  }
+  gate_south = new Gate(505,690,1,"Exit");
 }
 
 void drawBackground() {
