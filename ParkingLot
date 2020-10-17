@@ -1,6 +1,6 @@
 class ParkingStall{
   int ypos, xpos;
-  boolean occupied;
+  boolean occupied = false;
   ParkingStall(boolean occu, int x, int y){
     ypos = y;
     xpos = x;
@@ -21,7 +21,7 @@ class ParkingLot{
   ParkingStall [] stalls = new ParkingStall[120];
   
   ParkingLot(){
-    
+    boolean s;
     for (int i = 0, j = 0, k = 0; i < 120; ++i,++j){
     // i is the index number of the car, j is for each column, and k for each row
       if (i % 15 == 0){
@@ -38,7 +38,14 @@ class ParkingLot{
         j = j + 1;
       }
       
-      stalls[i] = new ParkingStall(false,120+j*50,220+k*30);
+      if ( i < full)
+        s = true;
+      else 
+        s = false;
+      
+      
+      stalls[i] = new ParkingStall(s, 120+j*50,220+k*30);
+      
     
   
     }
