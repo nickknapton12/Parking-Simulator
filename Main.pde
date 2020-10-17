@@ -1,5 +1,8 @@
+Street streatN;
+Street streatS;
+
 void setup() {
-  size(1200, 800);
+  size(1200, 830);
 }
 
 
@@ -17,6 +20,6 @@ void drawBackground() {
   fill(100);
   rect(570,190, 60, 20);
   rect(570,690, 60, 40);
-  Street steetN = new Street(80);
-  Street steet2 = new Street(720);
+  streatN = new Street(80);
+  streatS = new Street(720);
 }
