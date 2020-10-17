@@ -1,5 +1,3 @@
-Car cars[] = new Car[500];
-
 void spawncars(){
   for(int i = 0; i < 500; i++){
     int x = int(random(-200,0))*80;
