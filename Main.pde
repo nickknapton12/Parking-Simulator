@@ -1,6 +1,10 @@
-class Parking_Lot{
+void setup(){
+  size(1200,1200);
   
 }
-void setup(){
+
+
+void draw(){
+  background(206);
   
 }
