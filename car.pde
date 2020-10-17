@@ -1,8 +1,8 @@
 Car cars[] = new Car[500];
 
 void spawncars(){
-  for(int i = 0; i < 50; i++){
-    int x = int(random(-100,0))*80;
+  for(int i = 0; i < 500; i++){
+    int x = int(random(-200,0))*80;
     cars[i] = new Car (x, 80);
   }
 }
@@ -11,8 +11,13 @@ void drawcars(){
   for(int i = 0; i< 50; i++){
    cars[i].x = cars[i].x + 8; 
    cars[i].drawCar();
-   if(cars[i].x == 1400){
-    cars[i].x = -4000; 
+   if(cars[i].x == 8000){
+    cars[i].x = -11000; 
+   }
+   if(cars[i].x == 570){
+     if(random(0,3) == 0){
+       
+     }
    }
   }
 }
