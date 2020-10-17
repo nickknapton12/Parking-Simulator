@@ -29,12 +29,12 @@ void drawcars() {
         cars[i].drawCar();
       }
 
-      if (cars[i].x == 8000) {
-        cars[i].x = -16000;
+      if (cars[i].x == 1300) {
+        cars[i].x = -10000;
       }
 
       if (cars[i].x < 580 && cars[i].x > 550 && full < 120 && cars[i].leaving == false) {
-        if (int(random(0, 7)) == 1) {
+        if (int(random(0, 4)) == 1) {
           cars[i].down = true;
         }
       }
@@ -51,6 +51,7 @@ void drawcars() {
           cars[i].parked = false;
           cars[i].down = false;
           cars[i].leaving = true;
+          money = money + 8.25;
           full--;
         }
       }
