@@ -1,3 +1,6 @@
+//Class for each individual parking stall, receives whether its occupied and its position.
+
+
 class ParkingStall{
   int ypos, xpos;
   boolean occupied = false;
@@ -16,6 +19,8 @@ class ParkingStall{
 
       
 }
+
+//Class for array of all parking spots, creates the parking lot.
 
 class ParkingLot{
   ParkingStall [] stalls = new ParkingStall[120];
