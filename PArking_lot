@@ -1,22 +1,45 @@
-class parkingStall{
+class ParkingStall{
   int ypos, xpos;
-  parkingStall(boolean occu, int x, int y){
+  ParkingStall(boolean occu, int x, int y){
     ypos = y;
     xpos = x;
-    rect(xpos, ypos, 90,60);
+    
     if(occu == true)
-      fill(200,0,0);
+      fill(255,100,100);
     else
-      fill(0,200,0);
-  }   
+      fill(100,255,100);
+    stroke(0);
+    rect(xpos, ypos, 50,30);
+    
+  }
+
+      
 }
 
-class ParkingLotSection{
-  void creatsection(){
-    int j = 0;
-    //parkingStall [] stalls = new parkingStall [24];
-    for(int i = 0; i < 4; i++){
-      stalls[i] = parkingStall(true,200,200);
+class ParkingLot{
+  ParkingStall [] stalls = new ParkingStall[120];
+  
+  ParkingLot(){
+    
+    for (int i = 0, j = 0, k = 0; i < 120; ++i,++j){
+      if (i % 15 == 0){
+        j = 0;
+        k = k + 1; 
+      }
+      
+      if (i % 30 == 0){
+        k = k + 1;
+        
+      }
+      
+      if (i % 5 == 0){
+        j = j + 1;
+      }
+      
+      stalls[i] = new ParkingStall(false,120+j*50,220+k*30);
+    
+  
     }
   }
+  
 }
