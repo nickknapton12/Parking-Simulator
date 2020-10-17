@@ -10,7 +10,7 @@ Date current_date = new Date((int)random(1, 7), 0);
 int minute = 0;
 int raw_time = 0;
 int full = 0;
-Car cars[] = new Car[500];
+Car cars[] = new Car[1000];
 Gate gate_north;
 Gate gate_south;
 billboard B;
@@ -29,6 +29,7 @@ void setup() {
 void draw() {
   if(!cp.paused)
     raw_time++;
+  println(raw_time);
   minute = raw_time/5;
   current_date.time = minute/60;
   drawBackground();
