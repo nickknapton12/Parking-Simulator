@@ -1,3 +1,6 @@
-int main(){
-  return 0;
+class Parking_Lot{
+  
+}
+void setup(){
+  
 }
