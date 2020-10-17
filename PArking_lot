@@ -22,6 +22,7 @@ class ParkingLot{
   ParkingLot(){
     
     for (int i = 0, j = 0, k = 0; i < 120; ++i,++j){
+    // i is the index number of the car, j is for each column, and k for each row
       if (i % 15 == 0){
         j = 0;
         k = k + 1; 
