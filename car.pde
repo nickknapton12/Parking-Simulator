@@ -1,14 +1,14 @@
-Car cars[] = new Car[100];
+Car cars[] = new Car[50];
 
 void spawncars(){
-  for(int i = 0; i < 100; i++){
-    int x = int(random(-50,1250));
+  for(int i = 0; i < 50; i++){
+    int x = int(random(-2000+i*100, -2000+i+1*100));
     cars[i] = new Car (x, 80);
   }
 }
 
 void drawcars(){
-  for(int i = 0; i< 100; i++){
+  for(int i = 0; i< 50; i++){
    cars[i].x++; 
    cars[i].drawCar();
   }
