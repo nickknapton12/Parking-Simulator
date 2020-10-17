@@ -1,5 +1,10 @@
+import controlP5.*;
+
 Street streatN;
 Street streatS;
+control_panel cp = new control_panel();
+ControlP5 cp5;
+
 Date current_date = new Date((int)random(1, 7), 0);
 control_panel cp = new control_panel();
 int minute = 0;
@@ -11,6 +16,9 @@ void setup() {
   size(1200, 830);
   frameRate(30);
   spawncars();
+  cp5 = new ControlP5(this);
+  cp5.addButton("pause")
+  .setPosition(5, 25).setSize(200, 40).setLabel("PAUSE/PLAY");
 }
 
 
@@ -37,4 +45,8 @@ void drawBackground() {
   streatN = new Street(80);
   streatS = new Street(720);
   ParkingLot lot = new ParkingLot();
+}
+
+public void pause() {
+  cp.paused = !cp.paused;
 }
