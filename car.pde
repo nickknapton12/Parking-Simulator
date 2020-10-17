@@ -1,5 +1,5 @@
 void spawncars() {
-  for (int i = 0; i < 500; i++) {
+  for (int i = 0; i < 1000; i++) {
     int x = int(random(-16000 + 300 * i, -16000 + 300 + 1 * i));
     cars[i] = new Car (x, 82);
   }
@@ -10,7 +10,7 @@ int counter = 0;
 
 void drawcars() {
   if (!cp.paused) {
-    for (int i = 0; i< 500; i++) {
+    for (int i = 0; i< 1000; i++) {
       if (cars[i].parked == true) {
         cars[i].y = 722;
       } else if (cars[i].down == true) {
@@ -63,7 +63,7 @@ void drawcars() {
       counter++;
     }
   } else {
-    for(int i = 0; i < 500; i++) {
+    for(int i = 0; i < 1000; i++) {
       if(cars[i].parked == false){
           cars[i].drawCar();
       }
