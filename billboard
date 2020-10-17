@@ -1,0 +1,24 @@
+class billboard{
+  
+  billboard(int xpos,int ypos){
+    
+    stroke(0);
+    strokeWeight(1);
+    fill(0);
+    rect(1085,450,10,100); //legs
+    rect(1145,450,10,100);
+    fill(255);
+    rect(1050,400,140,100); //board
+    fill(0);
+    textSize(20);
+    text("Open",1085,425);
+    text("Stalls:",1085,445);
+    
+    text(120-full,1085,465);
+    
+  }
+  
+  
+  
+}
+    
