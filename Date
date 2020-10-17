@@ -1,7 +1,7 @@
 class Date {
-  int hour;
-  String weekday,time;
-  Date( int numb_day, hour){
+  int time;
+  String weekday;
+  Date( int numb_day, int hour){
     
     
     //takes numb day and converts to weekday
@@ -26,7 +26,7 @@ class Date {
     if(numb_day == 7){
      weekday = "Saturday";
     }
-    
+    time = hour;
     //takes hour(0-24) and converts to time
   }
     
