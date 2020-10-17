@@ -1,15 +1,13 @@
 class parkingStall{
   int ypos, xpos;
-  parkingStall(boolean occu, int x, int y){
+  parkingStall (boolean occu, int x, int y){
     ypos = y;
     xpos = x;
-    if(occu = true)
-      fill(red);
+    rect(xpos, ypos, 30,20);
+    if(occu == true)
+      fill(200,0,0);
     else
-      fill(green);
+      fill(0,200,0);
     
-  }
-
-  rect(xpos, ypos, 30,20);
-      
+  }   
 }
