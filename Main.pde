@@ -14,6 +14,7 @@ Car cars[] = new Car[500];
 Gate gate_north;
 Gate gate_south;
 billboard B;
+float money = 0;
 
 void setup() {
   size(1200, 830);
@@ -33,7 +34,8 @@ void draw() {
   current_date.time = minute/60;
   drawBackground();
   drawcars();
- B = new billboard(0,0);
+  B = new billboard(0,0);
+  B.money(0,0);
   drawcars();
   if(full < 120){
   gate_north = new Gate(505,190,1,"Enter");
