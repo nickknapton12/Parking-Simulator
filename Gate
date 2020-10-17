@@ -8,7 +8,7 @@ class Gate {
     rect(xpos, ypos, 50,30);
     fill(0);
     textSize(13);
-    text(label, xpos+15, ypos+15);
+    text(label, xpos+10, ypos+19);
     if(state == 0){
       fill(0);
       line(xpos+50, ypos, xpos+105,ypos);
