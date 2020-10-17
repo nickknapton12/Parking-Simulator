@@ -1,15 +1,18 @@
 Street streatN;
 Street streatS;
+
 int full = 0;
 
 void setup() {
   size(1200, 830);
   frameRate(30);
+  spawncars();
 }
 
 
 void draw() {
   drawBackground();
+  drawcars();
 }
 
 void drawBackground() {
