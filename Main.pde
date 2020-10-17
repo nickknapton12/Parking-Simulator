@@ -1,6 +1,9 @@
 Street streatN;
 Street streatS;
-
+Date current_date = new Date((int)random(1, 7), 0);
+control_panel cp = new control_panel();
+int minute = 0;
+int raw_time = 0;
 int full = 0;
 
 void setup() {
@@ -11,12 +14,17 @@ void setup() {
 
 
 void draw() {
+  raw_time++;
+  println(raw_time);
+  minute = raw_time/5;
+  current_date.time = minute/60;
   drawBackground();
   drawcars();
 }
 
 void drawBackground() {
   background(27, 128, 45);
+  cp.drawPanel();
   fill(100);
   stroke(255);
   strokeWeight(5);
