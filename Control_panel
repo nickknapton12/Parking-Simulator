@@ -1,0 +1,11 @@
+class control_panel {
+  boolean paused = true; //if true, stops entire simulation
+  
+  void drawPanel() {
+    fill(50);
+    noStroke();
+    rect(0, 0, 1200, 70);
+    fill(255);
+    text("Current date: " + current_date.weekday + ", " + current_date.time + ":" + minute%60, 0, 20);
+  }
+}
