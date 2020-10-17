@@ -1,5 +1,5 @@
 class control_panel {
-  boolean paused = true; //if true, stops entire simulation
+  boolean paused = false; //if true, stops entire simulation
   
   void drawPanel() {
     fill(50);
