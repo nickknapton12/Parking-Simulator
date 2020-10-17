@@ -6,7 +6,7 @@ control_panel cp = new control_panel();
 ControlP5 cp5;
 
 Date current_date = new Date((int)random(1, 7), 0);
-control_panel cp = new control_panel();
+
 int minute = 0;
 int raw_time = 0;
 int full = 0;
