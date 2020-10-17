@@ -5,8 +5,11 @@ void spawncars(){
   }
 }
 
+boolean oneCarAtTime = true;
+int counter = 0;
+
 void drawcars(){
-  for(int i = 0; i< 500; i++){
+   for(int i = 0; i< 500; i++){
     if(cars[i].parked == true){
        cars[i].y = 722;
     }
@@ -45,8 +48,9 @@ void drawcars(){
      println(full);
    }
     
-   if(cars[i].parked == true){
+   if(cars[i].parked == true && oneCarAtTime == true){
      if(int(random(0,500)) == 2){
+       oneCarAtTime = false;
        cars[i].parked = false;
        cars[i].down = false;
        cars[i].leaving = true;
@@ -54,8 +58,12 @@ void drawcars(){
        println(full);
      }
     }
-   
-   
+    
+    if(counter == 20){
+        counter = 0;
+        oneCarAtTime = true;
+    }
+   counter++;
   }
 }
 
