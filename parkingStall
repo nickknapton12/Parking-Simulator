@@ -1,0 +1,15 @@
+class parkingStall{
+  int ypos, xpos;
+  parkingStall(boolean occu, int x, int y){
+    ypos = y;
+    xpos = x;
+    if(occu = true)
+      fill(red);
+    else
+      fill(green);
+    
+  }
+
+  rect(xpos, ypos, 30,20);
+      
+}
