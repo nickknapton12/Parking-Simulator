@@ -1,6 +1,6 @@
 void spawncars(){
   for(int i = 0; i < 500; i++){
-    int x = int(random(-200,0))*80;
+    int x = int(random(-16000 + 300 * i,-16000 + 300 + 1 * i));
     cars[i] = new Car (x, 82);
   }
 }
@@ -12,7 +12,7 @@ void drawcars(){
       cars[i].drawCar();
     }
     else{
-       cars[i].x = cars[i].x + 3; 
+       cars[i].x = cars[i].x + 8; 
        cars[i].drawCar();
     }
    if(cars[i].x == 8000){
@@ -23,10 +23,10 @@ void drawcars(){
     cars[i].x = -16000; 
     cars[i].down = false;
    }
-   if(cars[i].x < 650 && cars[i].x > 550){
-     if(random(0,3) == 1){
+   if(cars[i].x < 580 && cars[i].x > 550){
+     if(int(random(0,20)) == 1){
        cars[i].down = true;
-    }
+     }
    }
   }
 }
