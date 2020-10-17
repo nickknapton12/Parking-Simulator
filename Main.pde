@@ -22,4 +22,5 @@ void drawBackground() {
   rect(570,690, 60, 40);
   streatN = new Street(80);
   streatS = new Street(720);
+  ParkingLot lot = new ParkingLot();
 }
