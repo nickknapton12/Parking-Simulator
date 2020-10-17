@@ -29,7 +29,6 @@ void setup() {
 void draw() {
   if(!cp.paused)
     raw_time++;
-  println(raw_time);
   minute = raw_time/5;
   current_date.time = minute/60;
   drawBackground();
