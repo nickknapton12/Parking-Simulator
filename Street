@@ -1,0 +1,15 @@
+class Street{
+int xpos = 0;
+  Street(int ypos){
+    noStroke();
+    fill(100);
+    rect(0,ypos,1200,110);
+   
+    int i = 0;
+    while( i< 1200){
+       fill(200,200,0);
+      rect(i,ypos+53,10,5);
+      i += 30;
+    }
+}
+}
