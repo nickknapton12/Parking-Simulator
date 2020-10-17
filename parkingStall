@@ -3,7 +3,7 @@ class parkingStall{
   parkingStall (boolean occu, int x, int y){
     ypos = y;
     xpos = x;
-    rect(xpos, ypos, 30,20);
+    rect(xpos, ypos, 90,60);
     if(occu == true)
       fill(200,0,0);
     else
