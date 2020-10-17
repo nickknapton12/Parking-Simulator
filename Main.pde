@@ -3,6 +3,7 @@ Street streatS;
 
 void setup() {
   size(1200, 830);
+  frameRate(30);
 }
 
 
