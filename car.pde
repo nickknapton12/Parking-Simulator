@@ -1,3 +1,5 @@
+//spawncars() spawns all cars randomly behind the left side of the window in a way that no cars are doubled. 
+
 void spawncars() {
   for (int i = 0; i < 1000; i++) {
     int x = int(random(-16000 + 300 * i, -16000 + 300 + 1 * i));
@@ -5,18 +7,22 @@ void spawncars() {
   }
 }
 
-boolean oneCarAtTime = true;
-int counter = 0;
+boolean oneCarAtTime = true; //responsible for deciding if a car is alowed to leave or not to stop two cars from leaving at a time.
+int counter = 0; 
 
 void drawcars() {
   if (!cp.paused) {
     for (int i = 0; i< 1000; i++) {
       if (cars[i].parked == true) {
         cars[i].y = 722;
-      } else if (cars[i].down == true) {
+      } 
+      
+      else if (cars[i].down == true) {
         cars[i].y = cars[i].y + 8; 
         cars[i].drawCar();
-      } else if (cars[i].leaving == true) {
+      } 
+      
+      else if (cars[i].leaving == true) {
         cars[i].x = cars[i].x + 8;
         if (cars[i].x < -100) {
           cars[i].leaving = false;
@@ -24,7 +30,9 @@ void drawcars() {
           cars[i].x = -16000;
         }
         cars[i].drawCar();
-      } else {
+      } 
+      
+      else {
         cars[i].x = cars[i].x + 8; 
         cars[i].drawCar();
       }
